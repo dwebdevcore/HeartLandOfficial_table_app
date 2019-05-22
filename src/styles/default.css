@@ -1,0 +1,219 @@
+:root {
+  font-size: 100%;
+  line-height: 1.2;
+  --body-bg: #fff;
+  --body-bg-alt: #f1f1f1;
+  --body-color: #555962;
+  --body-color-bold: #000;
+  --link-color: #288cc6;
+  --button-default: #818285;
+  --button-hover: #555962;
+  --button-action: #29ace2;
+  --button-action-hover: #288cc6;
+  --button-text: #fff;
+}
+:root.nightmode {
+  --body-bg: #292d34;
+  --body-bg-alt: #2d323c;
+  --body-color: #abb2be;
+  --body-color-bold: #fff;
+  --button-text: #fff;
+}
+:root * {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  color: var(--body-color);
+  min-height: 100vh;
+  font: 400 1rem/1.2 Montserrat, Helvetica, Arial, sans-serif;
+  background: var(--body-bg);
+}
+.content {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 1em;
+}
+.content.fw {
+  max-width: none;
+}
+a {
+  color: var(--link-color);
+}
+a.button,
+button {
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.5em 2em;
+  cursor: pointer;
+  color: var(--button-text);
+  font-size: 1rem;
+  border: none;
+  background-color: var(--button-default);
+}
+a.button:hover,
+a.button:active,
+button:hover,
+button:active {
+  background-color: var(--button-hover);
+}
+button[type='submit'] {
+  background-color: var(--button-action);
+}
+button[type='submit']:hover,
+button[type='submit']:active {
+  background-color: var(--button-action-hover);
+}
+a.button svg {
+  display: inline-block;
+  vertical-align: middle;
+  fill: currentColor;
+  margin: 0 0.3em;
+}
+a.button-download:hover {
+}
+
+select {
+}
+select option {
+  font-size: 1.1em;
+  line-height: 1.5;
+  padding: 4px;
+}
+select option[selected] {
+  background: purple;
+}
+select option:active {
+  background: red;
+}
+select option:focus {
+  background: green;
+}
+select option:checked {
+  background: orange;
+}
+
+.page-header {
+  padding: 1em;
+}
+.page-header .logo {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 400px;
+}
+.page-header .logo img {
+  display: block;
+  width: 100%;
+}
+.office-select,
+.offices-table {
+  margin: 0 auto;
+}
+.office-select select {
+  display: block;
+  margin: 0 auto;
+  height: 6rem;
+}
+.office-select button {
+  display: block;
+  margin: 1em auto;
+}
+.offices-table .buttons {
+  text-align: right;
+  margin: 1em auto;
+}
+
+figure.table {
+  overflow-x: auto;
+  width: 100%;
+  margin: 0 auto;
+}
+figure table {
+  min-width: 800px;
+}
+table {
+  width: 100%;
+  border: 0;
+  border-collapse: collapse;
+  font-size: 1rem;
+}
+table * {
+}
+thead th {
+  position: sticky;
+  top: 0;
+  padding: 8px 10px;
+  margin: 0 0 10px;
+  color: var(--body-color-bold);
+  border-bottom: 1px solid var(--body-color);
+}
+tbody,
+thead tr {
+}
+tr {
+}
+th {
+  text-align: left;
+  vertical-align: bottom;
+}
+th.address {
+  min-width: 200px;
+}
+tbody tr:nth-child(even) {
+  background: var(--body-bg-alt);
+}
+td {
+  vertical-align: top;
+  padding: 10px;
+  font-size: 1em;
+}
+td:first-child {
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+td:nth-child(2) {
+  font-size: 0.9em;
+}
+td .edit {
+  opacity: 0;
+  font-weight: 400;
+  transition: opacity ease-in-out 50ms;
+  font-size: 0.8em;
+  margin: 0.5em auto 0;
+}
+tr:hover td .edit {
+  opacity: 1;
+}
+
+.toggle-theme .content {
+  padding-top: 3em;
+  padding-bottom: 3em;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.toggle-theme label {
+  cursor: pointer;
+}
+.toggle-theme label svg {
+  fill: var(--body-color-bold);
+  width: 2em;
+  height: 2em;
+  display: none;
+}
+.toggle-theme label input:checked ~ .dark {
+  display: inline-block;
+}
+.toggle-theme label input:not(:checked) ~ .light {
+  display: inline-block;
+}
+.toggle-theme label .light {
+  
+}
+.toggle-theme label .dark {
+  
+}
+.toggle-theme input[type=checkbox] {
+  display: none;
+}

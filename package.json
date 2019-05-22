@@ -1,0 +1,21 @@
+{
+  "name": "verify-site",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "dotenv": "^6.0.0",
+    "react": "^16.4.0",
+    "react-csv": "^1.0.14",
+    "react-dom": "^16.4.0",
+    "react-router-dom": "^4.3.1",
+    "react-router-redux": "^4.0.8",
+    "react-scripts": "1.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "homepage": "."
+}
